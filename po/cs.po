@@ -6,11 +6,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wget 1.14\n"
+"Project-Id-Version: 1.14.52-9f0c-dirty\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
 "POT-Creation-Date: 2013-05-17 22:25+0100\n"
 "PO-Revision-Date: 2012-09-03 08:53+0200\n"
-"Last-Translator: Petr Pisar <petr.pisar@atlas.cz>\n"
+"Last-Translator: Jan Minar <rdancer@rdancer.org>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -262,18 +262,18 @@ msgstr "%s: adresu počítače %s nelze přeložit\n"
 #, fuzzy, c-format
 msgid "Converted %d file. "
 msgid_plural "Converted %d files. "
-msgstr[0] "%d souborů převedeno za %s sekund.\n"
-msgstr[1] "%d souborů převedeno za %s sekund.\n"
-msgstr[2] "%d souborů převedeno za %s sekund.\n"
+msgstr[0] "%d souborů převedeno."
+msgstr[1] "%d soubor převeden."
+msgstr[2] "%d soubory převedeny."
 
 # , c-format
 #: src/convert.c:206
 #, fuzzy, c-format
 msgid "Conversion took %lu second.\n"
 msgid_plural "Conversion took %lu seconds.\n"
-msgstr[0] "Spojení s %s:%hu odmítnuto.\n"
-msgstr[1] "Spojení s %s:%hu odmítnuto.\n"
-msgstr[2] "Spojení s %s:%hu odmítnuto.\n"
+msgstr[0] "Převedení trvalo %lu sekundu.\n"
+msgstr[1] "Převedení trvalo %lu sekundy.\n"
+msgstr[2] "Převedení trvalo %lu sekund.\n"
 
 #: src/convert.c:236
 #, c-format
@@ -2358,11 +2358,11 @@ msgid_plural ""
 msgstr[0] ""
 "KONEC --%s--\n"
 "Celkový skutečný čas: %s\n"
-"Staženo: %d souborů, %s za %s (%s)\n"
+"Staženo: %d soubor, %s za %s (%s)\n"
 msgstr[1] ""
 "KONEC --%s--\n"
 "Celkový skutečný čas: %s\n"
-"Staženo: %d souborů, %s za %s (%s)\n"
+"Staženo: %d soubory, %s za %s (%s)\n"
 msgstr[2] ""
 "KONEC --%s--\n"
 "Celkový skutečný čas: %s\n"
@@ -2552,7 +2552,7 @@ msgstr "Chyba v URL Proxy %s: Musí být HTTP.\n"
 msgid "%d redirection exceeded.\n"
 msgid_plural "%d redirections exceeded.\n"
 msgstr[0] "Překročeno %d přesměrování.\n"
-msgstr[1] "Překročeno %d přesměrování.\n"
+msgstr[1] "Překročena %d přesměrování.\n"
 msgstr[2] "Překročeno %d přesměrování.\n"
 
 #: src/retr.c:1119
