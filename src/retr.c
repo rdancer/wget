@@ -871,8 +871,11 @@ retrieve_url (struct url * orig_parsed, const char *origurl, char **file,
       /* Check for max. number of redirections.  */
       if (++redirection_count > opt.max_redirect)
         {
-          logprintf (LOG_NOTQUIET, _("%d redirections exceeded.\n"),
-                     opt.max_redirect);
+					logprintf (LOG_NOTQUIET,
+										 ngettext ("%d redirection exceeded.\n",
+															 "%d redirections exceeded.\n",
+															 opt.max_redirect),
+										 opt.max_redirect);
           url_free (newloc_parsed);
           if (orig_parsed != u)
             {

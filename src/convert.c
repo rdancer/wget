@@ -184,7 +184,7 @@ convert_links_in_hashtable (struct hash_table *downloaded_set,
 void
 convert_all_links (void)
 {
-  double secs;
+  unsigned long int secs;
   int file_count = 0;
 
   struct ptimer *timer = ptimer_new ();
@@ -192,9 +192,21 @@ convert_all_links (void)
   convert_links_in_hashtable (downloaded_html_set, 0, &file_count);
   convert_links_in_hashtable (downloaded_css_set, 1, &file_count);
 
-  secs = ptimer_measure (timer);
-  logprintf (LOG_VERBOSE, _("Converted %d files in %s seconds.\n"),
-             file_count, print_decimal (secs));
+  assert (atoi (print_decimal (ptimer_measure (timer))) >= 0);
+  secs = atoi (print_decimal (ptimer_measure (timer)));
+
+	/* Note: The translation framework cannot handle multiple plural forms in a
+		 single message. */
+	logprintf (LOG_VERBOSE,
+						 ngettext ("Converted %d file. ",
+											 "Converted %d files. ",
+											 file_count),
+						 file_count);
+	logprintf (LOG_VERBOSE,
+						 ngettext ("Conversion took %lu second.\n",
+											 "Conversion took %lu seconds.\n",
+											 secs),
+						 secs);
 
   ptimer_destroy (timer);
 }
